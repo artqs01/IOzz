@@ -1,0 +1,36 @@
+###
+GET http://localhost:8080/hell
+###
+GET http://localhost:8080/api/szkolas
+###
+GET http://localhost:8080/api/szkolas?gadka=test
+custom-header: jakiheder
+Cookie: zainteresowania=niewiem
+###
+GET http://localhost:8080/api/szkolas/1
+###
+GET http://localhost:8080/api/lessons/1/szkolas
+###
+POST http://localhost:8080/api/szkolas
+Content-Type: application/json
+Accept-Language: pl
+
+{
+  "name": "Szkola68",
+  "logo": "http://sp2.zsrydultowy.pl/wp-content/uploads/2017/11/tn_logo-sp2.jpg"
+}
+###
+GET http://localhost:8080/api/lessons
+###
+GET http://localhost:8080/api/lessons/1
+###
+GET http://localhost:8080/api/szkolas/1/lessons
+###
+POST http://localhost:8080/api/lessons
+Content-Type: application/json
+
+{
+  "nazwaPrzedmiotu": "Bilogia",
+  "liczba_godzin": 3,
+  "NauczycielId": 1
+}
